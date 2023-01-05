@@ -3,7 +3,7 @@ import { galleryItems } from './gallery-items.js';
 
 console.log(galleryItems);
 
-const galleryContainer = document.querySelector('.js-gallery');
+const galleryContainer = document.querySelector('.gallery');
 
 createGalleryItemsMarkup();
 
@@ -22,3 +22,8 @@ function createGalleryItemsMarkup() {
 
   galleryContainer.insertAdjacentHTML('beforeend', markup);
 }
+
+new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
